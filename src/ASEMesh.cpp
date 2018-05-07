@@ -207,7 +207,7 @@ GEOMOBJECT*  ASEMesh::Piking(const D3DXVECTOR3& _vPickRayOrig, const D3DXVECTOR3
 
 
 //-----------------------------------------------------------------------------
-// _Name으로 핼퍼오브젝트를 찾아서 그포인터를 반환해주는 함수  [2014.7.26 ]
+// _Name으로 핼퍼오브젝트를 찾아서 그포인터를 반환해주는 함수
 // 못찾았을경우 nullptr을 리턴한다.
 //-----------------------------------------------------------------------------
 const HELPEROBJECT*		ASEMesh::Get_HelperObject(CHAR* _Name) const

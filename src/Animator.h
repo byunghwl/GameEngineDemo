@@ -41,7 +41,7 @@ protected:
 	bool									m_bBlendStart;	//애니 블랜딩 시작
 	float									m_BlendingTime; //블랜딩이 시작되고 나서부터 지난 시간
 	float									m_BlendMaxTime; // 블랜딩이 진행되는 총 시간
-	CLIP_INFO*								m_pCurClip; // 현재 클립 포인터  [2014.11.25 ]
+	CLIP_INFO*								m_pCurClip; // 현재 클립 포인터  
 
 public:
 
@@ -69,7 +69,7 @@ public:// 일반함수
 	// 매프레임 마다 블랜딩  타이머를 증가시켜줄때 사용
 	void									Add_BlendTime(const float& _val ){m_BlendingTime += _val;}
 
-	// _pName 에 해당하는 애니메이션의 상태를 반환한다.   [2014.11.25 ]
+	// _pName 에 해당하는 애니메이션의 상태를 반환한다.  
 	int										GetAniState_By_Name(const CHAR* _pName);
 
 public: // get set

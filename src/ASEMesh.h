@@ -21,9 +21,9 @@ class ASEMesh  : public ASEData
 	friend class SKINNED_OBJECT;
 
 public:
-	//  외부에서 빌려온 버텍스 쉐이더 (해제도 외부에서) [2014.7.27 ]	
+	//  외부에서 빌려온 버텍스 쉐이더 (해제도 외부에서) 
 	LPDIRECT3DVERTEXSHADER9				m_pVtxShader;  
-	//  외부에서 빌려온 버텍스 쉐이더 (해제도 외부에서) [2014.7.27 ]	
+	//  외부에서 빌려온 버텍스 쉐이더 (해제도 외부에서)
 	LPDIRECT3DPIXELSHADER9				m_pPixShader;  
 	//충돌구
 	BoundingSphere						m_BSphere;    // 충돌구

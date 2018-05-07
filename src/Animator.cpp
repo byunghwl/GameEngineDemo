@@ -141,7 +141,7 @@ int  	CAnimator::Change_Ani_Clip(const CHAR* _pName)
 
 	Iter_Pos = m_stdMap_AniState.find(Name);
 	//////////////////////////////////////////////////////////////////////////
-	// 여기서부터 에니메이션 상태 설정해 주기  [2014.11.25 ]
+	// 여기서부터 에니메이션 상태 설정해 주기 
 
 	if((m_AniTime <= m_EndTime) && (m_AniTime>= m_StartTime))
 	{	Iter_Pos->second.eAniState = eAniState_Play; 	}
@@ -170,8 +170,7 @@ int  	CAnimator::Change_Ani_Clip(const CHAR* _pName)
 
 	m_pCurClip = &Iter_Pos->second;
 
-	m_AniTime = m_StartTime; //[2014.11.30 ]
-
+	m_AniTime = m_StartTime; 
 	return RVT_OK;
 
 }
@@ -183,7 +182,7 @@ int  	CAnimator::Change_Ani_Clip(const CHAR* _pName)
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
-// Desc   :  루아 파일에서 클립정보를 불러온다. [2014.10.20 ]
+// Desc   :  루아 파일에서 클립정보를 불러온다. 
 //-----------------------------------------------------------------------------
 int			CAnimator::Load_ClipInfo_from_Lua(const CHAR* _pPath)
 {

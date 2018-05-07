@@ -24,10 +24,10 @@ protected:
 	D3DXMATRIXA16					m_ViewMat;  //viewMatrix 
 	D3DXMATRIXA16					m_ProjMat;  //프로젝션 메트릭스,
 	D3DXMATRIXA16					m_ViewProjMat;  //view * Proj 
-	float							m_FOV;   // field of view [2014.11.18 ]
-	float							m_Aspect; // 가로 / 세로 [2014.11.18 ]
+	float							m_FOV;   // field of view 
+	float							m_Aspect; // 가로 / 세로 
 
-	float							m_AngleYaw; // y축으로 회전한 각도 [2014.11.23 ]
+	float							m_AngleYaw; // y축으로 회전한 각도
 
 	D3DXVECTOR3						m_CurRight; 
 	D3DXVECTOR3						m_CurUp;
