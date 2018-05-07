@@ -1,0 +1,7 @@
+2
+3
+object/Hat_BoneList.shrbl
+object/Hat_BoneList.shrbl
+10
+object/Hat_MeshList.shrml
+object/Hat_MeshList.shrml

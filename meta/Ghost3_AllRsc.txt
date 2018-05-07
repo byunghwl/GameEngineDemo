@@ -1,0 +1,10 @@
+3
+3
+object/Ghost3_BoneList.shrbl
+object/Ghost3_BoneList.shrbl
+10
+object/Ghost3_MeshList.shrml
+object/Ghost3_MeshList.shrml
+2
+./object/ghost3.shrsm
+ghost3.shrsm

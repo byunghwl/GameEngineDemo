@@ -1,0 +1,7 @@
+2
+3
+./object/Dragon_BoneList.shrbl
+Dragon_BoneList
+2
+./object/Skin_Dragon.shrsm
+Skin_Dragon

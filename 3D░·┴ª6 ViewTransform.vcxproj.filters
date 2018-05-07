@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\camera">
+      <UniqueIdentifier>{e4d23b2e-347b-418b-abeb-4ea6f0b78a75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\3DDataParsing">
+      <UniqueIdentifier>{e96fa346-014f-4f4a-8e33-a99e0f79e7f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\SHUtill">
+      <UniqueIdentifier>{473b7163-0339-42d5-9b32-4ac1c33a14b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\3DDataParsing\ASEData">
+      <UniqueIdentifier>{6eff4780-f908-4b9d-a030-7ea6a5e01361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\3DDataParsing\ASEParser">
+      <UniqueIdentifier>{4c805476-bf23-43f0-ade7-61c0bc5c8dcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\DXUT">
+      <UniqueIdentifier>{25b265ca-08f1-49b5-b57e-1423013f6b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\SHEffect">
+      <UniqueIdentifier>{e10e0a68-e098-486e-98a0-bf3b6fee405e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Weapon">
+      <UniqueIdentifier>{4a6b2553-1e00-48de-b251-d090b72679bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Object">
+      <UniqueIdentifier>{dff9065f-2559-438a-829a-f493fa78214b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Scene">
+      <UniqueIdentifier>{f653dbc2-63ea-4df1-bbed-99afe9b86fa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Resource">
+      <UniqueIdentifier>{e01e5e1f-4b7e-4765-9e8d-67b380397048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Entity">
+      <UniqueIdentifier>{788c965f-d5e7-46ff-ae5e-2f5f0614dc0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\ResourcePack">
+      <UniqueIdentifier>{c37c8938-5544-4bd8-ace1-385176dcc621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\EntityFactory">
+      <UniqueIdentifier>{a7648684-4a83-4104-b6bd-612576fb8eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Animator">
+      <UniqueIdentifier>{051ad04b-ff26-4bb5-85ab-77c835435e49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Lua">
+      <UniqueIdentifier>{315572e1-0a0c-487e-84ec-7e9fb9f364a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Lua\include">
+      <UniqueIdentifier>{ac569d68-630d-4e22-ac76-40d31b0736b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Shader">
+      <UniqueIdentifier>{14ee416e-a6f4-4eb9-9fad-3c13f07244dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\GUI">
+      <UniqueIdentifier>{bbd36af2-66d4-4755-9b0b-ed85aef81fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Massage">
+      <UniqueIdentifier>{27fb5abb-b87e-4aed-9a0d-6b87b19f59c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Collider">
+      <UniqueIdentifier>{4268f9d2-6eaa-448e-afb3-1e704f8c3439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Skill">
+      <UniqueIdentifier>{cc637db1-8396-4d93-b052-9f351d996289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Sprite">
+      <UniqueIdentifier>{583b3d68-1867-483a-a3c3-c87ef8becb7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\SHSound">
+      <UniqueIdentifier>{c350744b-ec69-4d12-9ec2-a0ed782764c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHUtility.cpp">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHlog.cpp">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHGame.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ASECameraData.cpp">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEData</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ASEData.cpp">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEData</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ASEMesh.cpp">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEData</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ASELexer.cpp">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ASEParser.cpp">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lexer.cpp">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\DXUT.cpp">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\SDKmisc.cpp">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\DXUTenum.cpp">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\DXUTmisc.cpp">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHCollision.cpp">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\DXUTInput.cpp">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHParticle.cpp">
+      <Filter>Resource Files\Source Files\SHEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHSmoke.cpp">
+      <Filter>Resource Files\Source Files\SHEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHSkyBox.cpp">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FrameWork.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera_SmoothFollow.cpp">
+      <Filter>Resource Files\Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>Resource Files\Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceMgr.cpp">
+      <Filter>Resource Files\Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Resource.cpp">
+      <Filter>Resource Files\Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneMgr.cpp">
+      <Filter>Resource Files\Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene.cpp">
+      <Filter>Resource Files\Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHR_Mesh.cpp">
+      <Filter>Resource Files\Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject.cpp">
+      <Filter>Resource Files\Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Object.cpp">
+      <Filter>Resource Files\Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity.cpp">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RscPack.cpp">
+      <Filter>Resource Files\Source Files\ResourcePack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EntityFactory.cpp">
+      <Filter>Resource Files\Source Files\EntityFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animator.cpp">
+      <Filter>Resource Files\Source Files\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHG_Lua.cpp">
+      <Filter>Resource Files\Source Files\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Resource Files\Source Files\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GUI_Base.cpp">
+      <Filter>Resource Files\Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SH_UI.cpp">
+      <Filter>Resource Files\Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\DXUTres.cpp">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message.cpp">
+      <Filter>Resource Files\Source Files\Massage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Collider.cpp">
+      <Filter>Resource Files\Source Files\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Room.cpp">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TedyBear.cpp">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ghost.cpp">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameSystem.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillCard.cpp">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillHat.cpp">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillRocketPunch.cpp">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkillScatter.cpp">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SH_Sprite.cpp">
+      <Filter>Resource Files\Source Files\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHBillBoard.cpp">
+      <Filter>Resource Files\Source Files\SHEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHSound.cpp">
+      <Filter>Resource Files\Source Files\SHSound</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\SHUtility.h">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHlog.h">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHDefine.h">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHGame.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ASECameraData.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEData</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ASEData.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEData</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ASEMesh.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEData</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ASELexer.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ASEParser.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lexer.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TokenDefinition.h">
+      <Filter>Resource Files\Source Files\3DDataParsing\ASEParser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DXUT\DXUT.h">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DXUT\SDKmisc.h">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DXUT\DXUTenum.h">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DXUT\DXUTmisc.h">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHCollision.h">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DXUT\DXUTInput.h">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHParticle.h">
+      <Filter>Resource Files\Source Files\SHEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHSmoke.h">
+      <Filter>Resource Files\Source Files\SHEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHSkyBox.h">
+      <Filter>Resource Files\Source Files\SHUtill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FrameWork.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Object.h">
+      <Filter>Resource Files\Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Camera_SmoothFollow.h">
+      <Filter>Resource Files\Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Camera.h">
+      <Filter>Resource Files\Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResourceMgr.h">
+      <Filter>Resource Files\Source Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>Resource Files\Source Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SceneMgr.h">
+      <Filter>Resource Files\Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.h">
+      <Filter>Resource Files\Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHR_Mesh.h">
+      <Filter>Resource Files\Source Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject.h">
+      <Filter>Resource Files\Source Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity.h">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RscPack.h">
+      <Filter>Resource Files\Source Files\ResourcePack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EntityFactory.h">
+      <Filter>Resource Files\Source Files\EntityFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animator.h">
+      <Filter>Resource Files\Source Files\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Lua\include\lualib.h">
+      <Filter>Resource Files\Source Files\Lua\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Lua\include\lauxlib.h">
+      <Filter>Resource Files\Source Files\Lua\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Lua\include\lua.h">
+      <Filter>Resource Files\Source Files\Lua\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Lua\include\lua.hpp">
+      <Filter>Resource Files\Source Files\Lua\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Lua\include\luaconf.h">
+      <Filter>Resource Files\Source Files\Lua\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHG_Lua.h">
+      <Filter>Resource Files\Source Files\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shader.h">
+      <Filter>Resource Files\Source Files\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GUI_Base.h">
+      <Filter>Resource Files\Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SH_UI.h">
+      <Filter>Resource Files\Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DXUT\DXUTres.h">
+      <Filter>Resource Files\Source Files\DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message.h">
+      <Filter>Resource Files\Source Files\Massage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Collider.h">
+      <Filter>Resource Files\Source Files\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Room.h">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TedyBear.h">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ghost.h">
+      <Filter>Resource Files\Source Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EntityFactoryArg.h">
+      <Filter>Resource Files\Source Files\EntityFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameSystem.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillCard.h">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillHat.h">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillRockectPunch.h">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkillScatter.h">
+      <Filter>Resource Files\Source Files\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SH_Sprite.h">
+      <Filter>Resource Files\Source Files\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHBillBoard.h">
+      <Filter>Resource Files\Source Files\SHEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHSound.h">
+      <Filter>Resource Files\Source Files\SHSound</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3D Engine RscMgr.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram11.cd" />
+  </ItemGroup>
+</Project>

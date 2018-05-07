@@ -1,0 +1,7 @@
+2
+3
+./object/TankCharacter_01_BoneList.shrbl
+./object/TankCharacter_01_BoneList.shrbl
+2
+./object/Box01.shrsm
+Box01.shrsm

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Animator.cpp" />
+    <ClCompile Include="src\ASECameraData.cpp" />
+    <ClCompile Include="src\ASEData.cpp" />
+    <ClCompile Include="src\ASEMesh.cpp" />
+    <ClCompile Include="src\ASELexer.cpp" />
+    <ClCompile Include="src\ASEParser.cpp" />
+    <ClCompile Include="src\Collider.cpp" />
+    <ClCompile Include="src\DXUT\DXUTres.cpp" />
+    <ClCompile Include="src\EntityFactory.cpp" />
+    <ClCompile Include="src\GameSystem.cpp" />
+    <ClCompile Include="src\Ghost.cpp" />
+    <ClCompile Include="src\GUI_Base.cpp" />
+    <ClCompile Include="src\Room.cpp" />
+    <ClCompile Include="src\message.cpp" />
+    <ClCompile Include="src\RscPack.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Camera_SmoothFollow.cpp" />
+    <ClCompile Include="src\DXUT\DXUT.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\DXUT\DXUTenum.cpp" />
+    <ClCompile Include="src\DXUT\DXUTInput.cpp" />
+    <ClCompile Include="src\DXUT\DXUTmisc.cpp" />
+    <ClCompile Include="src\DXUT\SDKmisc.cpp" />
+    <ClCompile Include="src\FrameWork.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\Lexer.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SHSound.cpp" />
+    <ClCompile Include="src\SH_Sprite.cpp" />
+    <ClCompile Include="src\SkillCard.cpp" />
+    <ClCompile Include="src\SkillHat.cpp" />
+    <ClCompile Include="src\SkillRocketPunch.cpp" />
+    <ClCompile Include="src\SkillScatter.cpp" />
+    <ClCompile Include="src\TedyBear.cpp" />
+    <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\Resource.cpp" />
+    <ClCompile Include="src\ResourceMgr.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\SceneMgr.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\SHBillBoard.cpp" />
+    <ClCompile Include="src\SHCollision.cpp" />
+    <ClCompile Include="src\SHGame.cpp" />
+    <ClCompile Include="src\SHG_Lua.cpp" />
+    <ClCompile Include="src\SHlog.cpp" />
+    <ClCompile Include="src\SHParticle.cpp" />
+    <ClCompile Include="src\SHSkyBox.cpp" />
+    <ClCompile Include="src\SHSmoke.cpp" />
+    <ClCompile Include="src\SHUtility.cpp" />
+    <ClCompile Include="src\SHR_Mesh.cpp" />
+    <ClCompile Include="src\Entity.cpp" />
+    <ClCompile Include="src\SH_UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\Lua\include\lauxlib.h" />
+    <ClInclude Include="common\Lua\include\lua.h" />
+    <ClInclude Include="common\Lua\include\lua.hpp" />
+    <ClInclude Include="common\Lua\include\luaconf.h" />
+    <ClInclude Include="common\Lua\include\lualib.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\Animator.h" />
+    <ClInclude Include="src\ASECameraData.h" />
+    <ClInclude Include="src\ASEData.h" />
+    <ClInclude Include="src\ASEMesh.h" />
+    <ClInclude Include="src\ASELexer.h" />
+    <ClInclude Include="src\ASEParser.h" />
+    <ClInclude Include="src\Collider.h" />
+    <ClInclude Include="src\DXUT\DXUTres.h" />
+    <ClInclude Include="src\EntityFactory.h" />
+    <ClInclude Include="src\EntityFactoryArg.h" />
+    <ClInclude Include="src\GameSystem.h" />
+    <ClInclude Include="src\Ghost.h" />
+    <ClInclude Include="src\GUI_Base.h" />
+    <ClInclude Include="src\Room.h" />
+    <ClInclude Include="src\message.h" />
+    <ClInclude Include="src\RscPack.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Camera_SmoothFollow.h" />
+    <ClInclude Include="src\DXUT\DXUT.h" />
+    <ClInclude Include="src\DXUT\DXUTenum.h" />
+    <ClInclude Include="src\DXUT\DXUTInput.h" />
+    <ClInclude Include="src\DXUT\DXUTmisc.h" />
+    <ClInclude Include="src\DXUT\SDKmisc.h" />
+    <ClInclude Include="src\FrameWork.h" />
+    <ClInclude Include="src\GameObject.h" />
+    <ClInclude Include="src\SHSound.h" />
+    <ClInclude Include="src\SH_Sprite.h" />
+    <ClInclude Include="src\SkillCard.h" />
+    <ClInclude Include="src\SkillHat.h" />
+    <ClInclude Include="src\SkillRockectPunch.h" />
+    <ClInclude Include="src\SkillScatter.h" />
+    <ClInclude Include="src\TedyBear.h" />
+    <ClInclude Include="src\Object.h" />
+    <ClInclude Include="src\Resource.h" />
+    <ClInclude Include="src\ResourceMgr.h" />
+    <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\SceneMgr.h" />
+    <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\SHBillBoard.h" />
+    <ClInclude Include="src\SHCollision.h" />
+    <ClInclude Include="src\SHDefine.h" />
+    <ClInclude Include="src\Lexer.h" />
+    <ClInclude Include="src\SHGame.h" />
+    <ClInclude Include="src\SHG_Lua.h" />
+    <ClInclude Include="src\SHlog.h" />
+    <ClInclude Include="src\SHParticle.h" />
+    <ClInclude Include="src\SHR_Mesh.h" />
+    <ClInclude Include="src\SHSkyBox.h" />
+    <ClInclude Include="src\SHSmoke.h" />
+    <ClInclude Include="src\SHUtility.h" />
+    <ClInclude Include="src\SH_UI.h" />
+    <ClInclude Include="src\TokenDefinition.h" />
+    <ClInclude Include="src\Entity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="3D Engine RscMgr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram11.cd" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9F4BFC2A-B546-43A5-9E55-59CF18111310}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My3D과제6ViewTransform</RootNamespace>
+    <ProjectName>TedyVSNightMare</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\</OutDir>
+    <IncludePath>$(SolutionDir)\src\DXUT;$(IncludePath)</IncludePath>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(SolutionDir)\src\DXUT;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)\</OutDir>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>DXUT.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\common\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AllowIsolation>false</AllowIsolation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\common\Lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PrecompiledHeaderFile>DXUT.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,68 @@
+ps_2_0
+
+
+//------------------------------------------------------------------------------
+// Vertex Shader test  ( 배성환 2014.7.29) 
+// SKINNED_OBJECT::Draw() 에서 상수 설정
+//
+//  Constants Registers:
+//
+//    c0    =   tempVector(0.0f, 1.0f, -1.0f, 3.0f);  
+//    c4-c7 =   view* proj;
+//    c8-c11=   아무것도없음
+//    c12   =   Light Diffuse
+//    c13   =	Light Direction
+//    c14   =   Light Ambient
+//
+//    c20   =   EyePosition
+//    c21   =   Material Diffuse
+//    c22   =   Material Specular   c22.w에는 specular power를 넣어준다.
+//    c23   =   Material Ambient
+//    c24   =   Material Emissive
+//
+//    c26~c256 = 스키닝을위한 본매트릭스
+//  Input Registers:
+//
+//    v0    = per-vertex position
+//    v1    = per-vertex blendWeight
+//    v2    = per-vertex belndIndices
+//    v3    = per-vertex Normal
+//    v4    = per-vertex Tex
+//
+//  Output Registers:
+//
+//    oPos  = homogeneous position
+//    oD0   = diffuse color
+//
+//------------------------------------------------------------------------------
+dcl v0   // Light_Ambient+ MAX(Dot (N, L), 0) * Light_Ambient_DiffColor, vtxShader에서 oD0가 넘어온 값..
+dcl v1   
+dcl t0.xy
+dcl t6      //position
+dcl t7      //normal   
+dcl_2d s0
+      
+//넘어온 값들을 노말라이즈 해주기
+nrm     r3,    t7;
+
+//Position, Normal정보를 가지고 내부적으로 라이팅 계산을 함
+// EyeDirection을 구하기
+add   r2,	-t6, 	c20;  // EyePos - vtxPos
+nrm   r6,       r2;	      //Normalize( EyePos - vtxPos ) = EyeVec
+
+ //specular Term을 계산하기
+add   r5,       r6,     c13;  //EyeVec + LightVec
+nrm   r2,       r5;           //Normalize(EyeVec + LightVec ) = HarfVec
+dp3   r4.y,     r3,     r2;   //Dot(N,H) = r4.y
+mov   r4.w,     c22.w;        //c22.w : specular power
+
+pow   r7.z,       r4.y,   r4.w;
+//lit   r4,       r4;           //lit값을 최종 계산한다.
+mul   r8,   r7.z,   c12;  // cos(@)^power * Light_Diffuse
+mul   r1,      r8,     c22;    //cos(@)^power * Light_Diffuse * Material_Specular;
+
+
+texld   r0,  t0,  s0;
+mul     r0,  r0,  v0;     //버텍스쉐이더에서 넘어오는 디퓨즈+라이트 값과 텍스쳐값을 더한다. 
+add   r0,  r0,  r1;
+mov     oC0, r0;

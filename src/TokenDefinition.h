@@ -1,0 +1,517 @@
+
+
+#pragma once
+//-----------------------------------------------------------------------------
+//  Toke Definition
+// 
+//  1) ASE File에 사용되는 예약어 Token들에 대응되는 Return값이다.
+//
+//  2) 각 Definiation의 이름에서 'TOKERN_'를 제거하면 해당 Token의 String과 거의
+//     일치합니다.
+//     (일치하는 정확한 String의 경우 ASELexer File을 보면 됨)
+//
+//  3) 여기에 있는 예약어 Token말고 기본 Token값도 있다.
+//     - TOKEND_NUMBER		1001	숫자를 의미한다.
+//     - TOKEND_STRING		1002	문자열을 의미한다. (""가 쳐져있는 것)
+//     - TOKEND_BLOCK_START	1002	Block의 시작 즉 '{'를 의미한다.
+//     - TOKEND_BLOCK_END	1003	Block의 끝 즉 '}'를 의미한다.
+//
+//     - TOKEND_END			65534	File의 끝을 의미한다.
+//     - TOKEND_IDENTIFIER	65535	변수를 의미한다.(여기서는 사용하지 않는다.)
+//     - TOKEND_NOTDEFINED	65536	정의되지 않은 것을 의미한다. (쉽게 말해 Error)
+// 
+//-----------------------------------------------------------------------------
+enum _ASEToken
+{
+	TOKERN_3DSMAX_ASCIIEXPORT			=  0,
+	TOKERN_COMMENT						=  1,
+	TOKERN_SCENE						=  2,
+	TOKERN_MATERIAL_LIST				=  3,
+	TOKERN_MATERIAL						=  4,
+	TOKERN_LIGHTOBJECT					=  5,
+	TOKERN_GEOMOBJECT					=  6,
+	TOKERN_NODE_NAME					=  7,
+	TOKERN_NODE_TM						=  8,
+	TOKERN_MESH							=  9,
+	TOKERN_MESH_VERTEX					= 10,
+	TOKERN_MESH_FACE_LIST				= 11,
+	TOKERN_MESH_FACE					= 12,
+	TOKERN_MESH_NUMTVERTEX				= 13,
+	TOKERN_MESH_NUMCVERTEX				= 14,
+	TOKERN_MESH_NORMALS					= 15,
+	TOKERN_MESH_FACENORMAL				= 16,
+	TOKERN_MESH_VERTEXNORMAL			= 17,
+	TOKERN_HELPEROBJECT					= 18,
+	TOKERN_NODE_PARENT					= 19,
+	TOKERN_HELPER_CLASS					= 20,
+	TOKERN_INHERIT_POS					= 21,
+	TOKERN_INHERIT_ROT					= 22,
+	TOKERN_INHERIT_SCL					= 23,
+	TOKERN_TM_ROW0						= 24,
+	TOKERN_TM_ROW1						= 25,
+	TOKERN_TM_ROW2						= 26,
+	TOKERN_TM_ROW3						= 27,
+	TOKERN_TM_POS						= 28,
+	TOKERN_TM_ROTAXIS					= 29,
+	TOKERN_TM_ROTANGLE					= 30,
+	TOKERN_TM_SCALE						= 31,
+	TOKERN_TM_SCALEAXIS					= 32,
+	TOKERN_TM_SCALEAXISANG				= 33,
+	TOKERN_BOUNDINGBOX_MIN				= 34,
+	TOKERN_BOUNDINGBOX_MAX				= 35,
+	TOKERN_TIMEVALUE					= 36,
+	TOKERN_MESH_NUMVERTEX				= 37,
+	TOKERN_MESH_NUMFACES				= 38,
+	TOKERN_GROUP						= 39,
+	TOKERN_MESH_TVERT					= 40,
+	TOKERN_MESH_TFACELIST				= 41,
+	TOKERN_MESH_TVERTLIST				= 42,
+	TOKERN_PROP_MOTIONBLUR				= 43,
+	TOKERN_PROP_CASTSHADOW				= 44,
+	TOKERN_PROP_RECVSHADOW				= 45,
+	TOKERN_MATERIAL_REF					= 46,
+	TOKERN_SCENE_FILENAME				= 48,
+	TOKERN_SCENE_FIRSTFRAME				= 49,
+	TOKERN_SCENE_LASTFRAME				= 50,
+	TOKERN_SCENE_FRAMESPEED				= 51,
+	TOKERN_SCENE_TICKSPERFRAME			= 52,
+	TOKERN_SCENE_ENVMAP					= 53,
+	TOKERN_MAP_NAME						= 54,
+	TOKERN_MAP_CLASS					= 55,
+	TOKERN_MAP_SUBNO					= 56,
+	TOKERN_MAP_AMOUNT					= 57,
+	TOKERN_SCENE_AMBIENT_STATIC			= 58,
+	TOKERN_MATERIAL_COUNT				= 59,
+	TOKERN_MATERIAL_NAME				= 60,
+	TOKERN_MATERIAL_CLASS				= 61,
+	TOKERN_MATERIAL_AMBIENT				= 62,
+	TOKERN_MATERIAL_DIFFUSE				= 63,
+	TOKERN_MATERIAL_SPECULAR			= 64,
+	TOKERN_MATERIAL_SHINE				= 65,
+	TOKERN_MATERIAL_SHINESTRENGTH		= 66,
+	TOKERN_MATERIAL_TRANSPARENCY		= 67,
+	TOKERN_MATERIAL_WIRESIZE			= 68,
+	TOKERN_MATERIAL_SHADING				= 69,
+	TOKERN_MATERIAL_XP_FALLOFF			= 70,
+	TOKERN_MATERIAL_SELFILLUM			= 71,
+	TOKERN_MATERIAL_TWOSIDED			= 72,
+	TOKERN_MATERIAL_FALLOFF				= 73,
+	TOKERN_MATERIAL_XP_TYPE				= 74,
+	TOKERN_MAP_DIFFUSE					= 75,
+	TOKERN_MESH_VERTEX_LIST				= 76,
+	TOKERN_MESH_NUMTVFACES				= 77,
+	TOKERN_MESH_CVERTLIST				= 78,
+	TOKERN_LIGHT_TYPE					= 79,
+	TOKERN_LIGHT_SHADOWS				= 80,
+	TOKERN_LIGHT_USELIGHT				= 81,
+	TOKERN_LIGHT_SPOTSHAPE				= 82,
+	TOKERN_LIGHT_USEGLOBAL				= 83,
+	TOKERN_LIGHT_ABSMAPBIAS				= 84,
+	TOKERN_LIGHT_OVERSHOOT				= 85,
+	TOKERN_LIGHT_SETTINGS				= 86,
+	TOKERN_LIGHT_COLOR					= 87,
+	TOKERN_LIGHT_INTENS					= 88,
+	TOKERN_LIGHT_ASPECT					= 89,
+	TOKERN_LIGHT_TDIST					= 90,
+	TOKERN_LIGHT_MAPBIAS				= 91,
+	TOKERN_LIGHT_MAPRANGE				= 92,
+	TOKERN_LIGHT_MAPSIZE				= 93,
+	TOKERN_LIGHT_RAYBIAS				= 94,
+	TOKERN_MESH_SMOOTHING				= 95,
+	TOKERN_MESH_MTLID					= 96,
+	TOKERN_WIREFRAME_COLOR				= 97,
+	TOKERN_TM_ANIMATION					= 98,
+	TOKERN_CONTROL_POS_TRACK			= 99,
+	TOKERN_CONTROL_ROT_TRACK			=100,
+	TOKERN_CONTROL_POS_SAMPLE			=101,
+	TOKERN_CONTROL_ROT_SAMPLE			=102,
+	TOKERN_CAMERAOBJECT					=103,
+	TOKERN_CAMERA_TYPE					=104,
+	TOKERN_CAMERA_SETTINGS				=105,
+	TOKERN_CAMERA_NEAR					=106,
+	TOKERN_CAMERA_FAR					=107,
+	TOKERN_CAMERA_FOV					=108,
+	TOKERN_CAMERA_TDIST					=109,
+	TOKERN_NUMSUBMTLS					=110,
+	TOKERN_SUBMATERIAL					=111,
+	TOKERN_MAP_SPECULAR					=112,
+	TOKERN_MAP_SHINE					=113,
+	TOKERN_MAP_GENERIC					=114,
+	TOKERN_BITMAP						=115,
+	TOKERN_MAP_TYPE						=116,
+	TOKERN_UVW_U_OFFSET					=117,
+	TOKERN_UVW_V_OFFSET					=118,
+	TOKERN_UVW_U_TILING					=119,
+	TOKERN_UVW_V_TILING					=120,
+	TOKERN_UVW_ANGLE					=121,
+	TOKERN_UVW_BLUR						=122,
+	TOKERN_UVW_BLUR_OFFSET				=123,
+	TOKERN_UVW_NOUSE_AMT				=124,
+	TOKERN_UVW_NOISE_SIZE				=125,
+	TOKERN_UVW_NOISE_LEVEL				=126,
+	TOKERN_UVW_NOISE_PHASE				=127,
+	TOKERN_BITMAP_FILTER				=128,
+	TOKERN_MESH_MAPPINGCHANNEL			=129,
+	TOKERN_MESH_TFACE					=130,
+	TOKERN_CONTROL_POS_BEZIER			=131,
+	TOKERN_CONTROL_BEZIER_POS_KEY 		=132,
+	TOKERN_CONTROL_ROT_TCB				=133,
+	TOKERN_CONTROL_TCB_ROT_KEY 			=134,
+	TOKERN_MAP_OPACITY					=135,
+	TOKERN_MATERIAL_FACEMAP				=136,
+	TOKERN_MESH_NUMSKINWEIGHT			=137,
+	TOKERN_MESH_NUMBONE					=138,
+	TOKERN_BONE_LIST					=139,
+	TOKERN_BONE_NAME					=140,
+	TOKERN_MESH_WVERTEXS				=141,
+	TOKERN_MESH_WEIGHT					=142,
+	TOKERN_BONE_BLENGING_WEIGHT			=143,
+	TOKERN_MAP_REFLECT					=144,
+	TOKERN_MAP_REFRACT					=145,
+	TOKERN_MAP_BUMP						=146,
+	TOKERN_SCENE_BACKGROUND_STATIC		=147,
+	TOKERN_MAP_SELFILLUM				=148,
+	TOKERN_LIGHT_EXCLUDELIST			=149,
+	TOKERN_LIGHT_NUMEXCLUDED			=150,
+	TOKERN_LIGHT_EXCLUDED_INCLUDE		=151,
+	TOKERN_LIGHT_EXCLUDED_AFFECT_ILLUM	=152,
+	TOKERN_LIGHT_EXCLUDED_AFFECT_SHADOW	=153,
+	TOKERN_LIGHT_EXCLUDED				=154,
+	TOKERN_LIGHT_HOTSPOT				=155,
+	TOKERN_LIGHT_FALLOFF				=156,
+	TOKERN_MESH_FACEMAPLIST				=157,
+	TOKERN_MESH_FACEMAP					=158,
+	TOKERN_MESH_FACEMAPVERT				=159,
+	TOKERN_BITMAP_INVERT				=160,
+	TOKERN_SHAPEOBJECT					=161,
+	TOKERN_SHAPE_LINECOUNT				=162,
+	TOKERN_SHAPE_LINE					=163,
+	TOKERN_SHAPE_VERTEXCOUNT			=164,
+	TOKERN_SHAPE_VERTEX_KNOT			=165,
+	TOKERN_SHAPE_VERTEX_INTERP			=166,
+	TOKERN_SHAPE_CLOSED					=167,
+	TOKERN_IK_JOINT						=168,
+	TOKERN_IK_TYPE						=169,
+	TOKERN_IK_DOF						=170,
+	TOKERN_IK_XACTIVE					=171,
+	TOKERN_IK_YACTIVE					=172,
+	TOKERN_IK_ZACTIVE					=173,
+	TOKERN_IK_XLIMITED					=174,
+	TOKERN_IK_YLIMITED					=175,
+	TOKERN_IK_ZLIMITED					=176,
+	TOKERN_IK_XEASE						=177,
+	TOKERN_IK_YEASE						=178,
+	TOKERN_IK_ZEASE						=179,
+	TOKERN_IK_LIMITEXACT				=180,
+	TOKERN_IK_JOINTINFO					=181,
+	TOKERN_LIGHT_ATTNSTART				=182,
+	TOKERN_LIGHT_ATTNEND				=183,
+	TOKERN_MAP_AMBIENT					=184,
+	TOKERN_MESH_VERTCOL					=185,
+	TOKERN_MESH_NUMCVFACES				=186,
+	TOKERN_MESH_CFACELIST				=187,
+	TOKERN_MESH_CFACE					=188,
+	TOKERN_MAP_SHINESTRENGTH			=189,
+	TOKERN_MAP_FILTERCOLOR				=190,
+
+	TOKERN_NODE_VISIBILITY_TRACK		=191,
+	TOKERN_CONTROL_FLOAT_SAMPLE			=192,
+	TOKERN_CONTROL_FLOAT_KEY			=193,
+
+	TOKERN_BONE_PROPERTY				=194,
+	TOKERN_BONE							=195,
+	TOKERN_SKIN_INITTM					=196,
+	TOKERN_CONTROL_SCALE_TRACK			=197,
+	TOKERN_CONTROL_SCALE_SAMPLE			=198,
+	TOKERN_SCENE_AMBIENT_ANIM			=199,
+	TOKERN_CONTROL_POINT3_KEY			=200,
+	TOKERN_CONTROL_TCB_POINT3_KEY		=201,
+	TOKERN_CONTROL_TCB_FLOAT_KEY		=202,
+	TOKERN_CONTROL_TCB_POS_KEY			=203,
+	TOKERN_CONTROL_TCB_SCALE_KEY		=204,
+	TOKERN_CONTROL_BEZIER_FLOAT_KEY		=205,
+	TOKERN_CONTROL_BEZIER_POINT3_KEY	=206,
+	TOKERN_CONTROL_BEZIER_SCALE_KEY		=207,
+	TOKERN_CONTROL_POS_LINEAR			=208,
+	TOKERN_CONTROL_POS_TCB				=209,
+	TOKERN_CONTROL_ROT_LINEAR			=210,
+	TOKERN_CONTROL_ROT_BEZIER			=211,
+	TOKERN_CONTROL_SCALE_LINEAR			=212,
+	TOKERN_CONTROL_SCALE_TCB			=213,
+	TOKERN_CONTROL_SCALE_BEZIER			=214,
+
+	TOKERN_CONTROL_POS_KEY				=215,
+	TOKERN_CONTROL_ROT_KEY 				=216,
+	TOKERN_CONTROL_SCALE_KEY			=217,
+
+	TOKERN_CONTROL_POINT3_TCB			=218,
+	TOKERN_CONTROL_POINT3_BEZIER		=219,
+	TOKERN_CONTROL_COLOR_BEZIER			=220,
+	TOKERN_CONTROL_POINT3_SAMPLE		=221,
+
+	TOKERN_CONTROL_FLOAT_TCB			=222,
+	TOKERN_CONTROL_FLOAT_BEZIER			=223,
+	TOKERN_CONTROL_FLOAT_LINEAR			=224,
+
+	TOKERN_CAMERA_ANIMATION				=225,
+	TOKERN_LIGHT_ANIMATION				=226,
+
+	TOKERN_MATERIAL_WIREUNITS			=227,
+
+	TOKERN_SCENE_MESHFRAMESTEP			=228,
+	TOKERN_SCENE_KEYFRAMESTEP			=229,
+
+	TOKERN_PROP_HIDDEN					=230,
+	TOKERN_PROP_NORENDERABLE			=231,
+	TOKERN_PROP_BONE					=232,
+
+	TOKERN_MAX
+};											
+
+
+const char* const Token[256] = {
+						"*3DSMAX_ASCIIEXPORT"		/*  0*/
+					 ,  "*COMMENT"					/*  1*/
+					 ,  "*SCENE"					/*  2*/
+					 ,  "*MATERIAL_LIST"			/*  3*/
+					 ,  "*MATERIAL"					/*  4*/
+					 ,  "*LIGHTOBJECT"				/*  5*/
+					 ,  "*GEOMOBJECT"				/*  6*/
+					 ,  "*NODE_NAME"				/*  7*/
+					 ,  "*NODE_TM"					/*  8*/
+					 ,  "*MESH"						/*  9*/
+					 ,  "*MESH_VERTEX"				/* 10*/
+					 ,  "*MESH_FACE_LIST"			/* 11*/
+					 ,  "*MESH_FACE"				/* 12*/
+					 ,  "*MESH_NUMTVERTEX"			/* 13*/
+					 ,  "*MESH_NUMCVERTEX"			/* 14*/
+					 ,  "*MESH_NORMALS"				/* 15*/
+					 ,  "*MESH_FACENORMAL"			/* 16*/
+					 ,  "*MESH_VERTEXNORMAL"		/* 17*/
+					 ,  "*HELPEROBJECT"				/* 18*/
+					 ,  "*NODE_PARENT"				/* 19*/
+					 ,  "*HELPER_CLASS"				/* 20*/
+					 ,  "*INHERIT_POS"				/* 21*/
+					 ,  "*INHERIT_ROT"				/* 22*/
+					 ,  "*INHERIT_SCL"				/* 23*/
+					 ,  "*TM_ROW0"					/* 24*/
+					 ,  "*TM_ROW1"					/* 25*/
+					 ,  "*TM_ROW2"					/* 26*/
+					 ,  "*TM_ROW3"					/* 27*/
+					 ,  "*TM_POS"					/* 28*/
+					 ,  "*TM_ROTAXIS"				/* 29*/
+					 ,  "*TM_ROTANGLE"				/* 30*/
+					 ,  "*TM_SCALE"					/* 31*/
+					 ,  "*TM_SCALEAXIS"				/* 32*/
+					 ,  "*TM_SCALEAXISANG"			/* 33*/
+					 ,  "*BOUNDINGBOX_MIN"			/* 34*/
+					 ,  "*BOUNDINGBOX_MAX"			/* 35*/
+					 ,  "*TIMEVALUE"				/* 36*/
+					 ,  "*MESH_NUMVERTEX"			/* 37*/
+					 ,  "*MESH_NUMFACES"			/* 38*/
+					 ,  "*GROUP"					/* 39*/
+					 ,  "*MESH_TVERT"				/* 40*/
+					 ,  "*MESH_TFACELIST"			/* 41*/
+					 ,  "*MESH_TVERTLIST"			/* 42*/
+					 ,  "*PROP_MOTIONBLUR"			/* 43*/
+					 ,  "*PROP_CASTSHADOW"			/* 44*/
+					 ,  "*PROP_RECVSHADOW"			/* 45*/
+					 ,  "*MATERIAL_REF"				/* 46*/
+					 ,  "*NODE_PARENT"				/* 47*/
+					 ,  "*SCENE_FILENAME"			/* 48*/
+					 ,  "*SCENE_FIRSTFRAME"			/* 49*/
+					 ,  "*SCENE_LASTFRAME"			/* 50*/
+					 ,  "*SCENE_FRAMESPEED"			/* 51*/
+					 ,  "*SCENE_TICKSPERFRAME"		/* 52*/
+					 ,  "*SCENE_ENVMAP"				/* 53*/
+					 ,  "*MAP_NAME"					/* 54*/
+					 ,  "*MAP_CLASS"				/* 55*/
+					 ,  "*MAP_SUBNO"				/* 56*/
+					 ,  "*MAP_AMOUNT"				/* 57*/
+					 ,  "*SCENE_AMBIENT_STATIC"		/* 58*/
+					 ,  "*MATERIAL_COUNT"			/* 59*/
+					 ,  "*MATERIAL_NAME"			/* 60*/
+					 ,  "*MATERIAL_CLASS"			/* 61*/
+					 ,  "*MATERIAL_AMBIENT"			/* 62*/
+					 ,  "*MATERIAL_DIFFUSE"			/* 63*/
+					 ,  "*MATERIAL_SPECULAR"		/* 64*/
+					 ,  "*MATERIAL_SHINE"			/* 65*/
+					 ,  "*MATERIAL_SHINESTRENGTH"	/* 66*/
+					 ,  "*MATERIAL_TRANSPARENCY"	/* 67*/
+					 ,  "*MATERIAL_WIRESIZE"		/* 68*/
+					 ,  "*MATERIAL_SHADING"			/* 69*/
+					 ,  "*MATERIAL_XP_FALLOFF"		/* 70*/
+					 ,  "*MATERIAL_SELFILLUM"		/* 71*/
+					 ,  "*MATERIAL_TWOSIDED"		/* 72*/
+					 ,  "*MATERIAL_FALLOFF"			/* 73*/
+					 ,  "*MATERIAL_XP_TYPE"			/* 74*/
+					 ,  "*MAP_DIFFUSE"				/* 75*/
+					 ,  "*MESH_VERTEX_LIST"			/* 76*/
+					 ,  "*MESH_NUMTVFACES"			/* 77*/
+					 ,  "*MESH_CVERTLIST"			/* 78*/
+					 ,  "*LIGHT_TYPE"				/* 79*/
+					 ,  "*LIGHT_SHADOWS"			/* 80*/
+					 ,  "*LIGHT_USELIGHT"			/* 81*/
+					 ,  "*LIGHT_SPOTSHAPE"			/* 82*/
+					 ,  "*LIGHT_USEGLOBAL"			/* 83*/
+					 ,  "*LIGHT_ABSMAPBIAS"			/* 84*/
+					 ,  "*LIGHT_OVERSHOOT"			/* 85*/
+					 ,  "*LIGHT_SETTINGS"			/* 86*/
+					 ,  "*LIGHT_COLOR"				/* 87*/
+					 ,  "*LIGHT_INTENS"				/* 88*/
+					 ,  "*LIGHT_ASPECT"				/* 89*/
+					 ,  "*LIGHT_TDIST"				/* 90*/
+					 ,  "*LIGHT_MAPBIAS"			/* 91*/
+					 ,  "*LIGHT_MAPRANGE"			/* 92*/
+					 ,  "*LIGHT_MAPSIZE"			/* 93*/
+					 ,  "*LIGHT_RAYBIAS"			/* 94*/
+					 ,	"*MESH_SMOOTHING"			/* 95*/
+					 ,  "*MESH_MTLID"				/* 96*/
+					 ,  "*WIREFRAME_COLOR"			/* 97*/
+					 ,	"*TM_ANIMATION"				/* 98*/
+					 ,	"*CONTROL_POS_TRACK"		/* 99*/
+					 ,	"*CONTROL_ROT_TRACK"		/*100*/
+					 ,	"*CONTROL_POS_SAMPLE"		/*101*/
+					 ,	"*CONTROL_ROT_SAMPLE"		/*102*/
+					 ,	"*CAMERAOBJECT"				/*103*/
+					 ,	"*CAMERA_TYPE"				/*104*/
+					 ,	"*CAMERA_SETTINGS"			/*105*/
+					 ,	"*CAMERA_NEAR"				/*106*/
+					 ,	"*CAMERA_FAR"				/*107*/
+					 ,	"*CAMERA_FOV"				/*108*/
+					 ,	"*CAMERA_TDIST"				/*109*/
+					 ,	"*NUMSUBMTLS"				/*110*/
+					 ,	"*SUBMATERIAL"				/*111*/
+					 ,	"*MAP_SPECULAR"				/*112*/
+					 ,	"*MAP_SHINE"				/*113*/
+					 ,	"*MAP_GENERIC"				/*114*/
+					 ,	"*BITMAP"					/*115*/
+					 ,	"*MAP_TYPE"					/*116*/
+					 ,	"*UVW_U_OFFSET"				/*117*/
+					 ,	"*UVW_V_OFFSET"				/*118*/
+					 ,	"*UVW_U_TILING"				/*119*/
+					 ,	"*UVW_V_TILING"				/*120*/
+					 ,	"*UVW_ANGLE"				/*121*/
+					 ,	"*UVW_BLUR"					/*122*/
+					 ,	"*UVW_BLUR_OFFSET"			/*123*/
+					 ,	"*UVW_NOUSE_AMT"			/*124*/
+					 ,	"*UVW_NOISE_SIZE"			/*125*/
+					 ,	"*UVW_NOISE_LEVEL"			/*126*/
+					 ,	"*UVW_NOISE_PHASE"			/*127*/
+					 ,	"*BITMAP_FILTER"			/*128*/
+					 ,  "*MESH_MAPPINGCHANNEL"		/*129*/
+					 ,  "*MESH_TFACE"				/*130*/
+					 ,  "*CONTROL_POS_BEZIER"		/*131*/
+					 ,  "*CONTROL_BEZIER_POS_KEY"	/*132*/
+					 ,  "*CONTROL_ROT_TCB"			/*133*/
+					 ,  "*CONTROL_TCB_ROT_KEY"		/*134*/
+					 ,  "*MAP_OPACITY"				/*135*/
+					 ,  "*MATERIAL_FACEMAP"			/*136*/
+					 ,	"*MESH_NUMSKINWEIGHT"		/*137*/
+					 ,	"*MESH_NUMBONE"				/*138*/
+					 ,	"*BONE_LIST"				/*139*/
+					 ,	"*BONE_NAME"				/*140*/
+					 ,	"*MESH_WVERTEXS"			/*141*/
+					 ,	"*MESH_WEIGHT"				/*142*/
+					 ,	"*BONE_BLENGING_WEIGHT"		/*143*/
+					 ,	"*MAP_REFLECT"				/*144*/
+					 ,	"*MAP_REFRACT"				/*145*/
+					 ,	"*MAP_BUMP"					/*146*/
+					 ,	"*SCENE_BACKGROUND_STATIC"	/*147*/
+					 ,	"*MAP_SELFILLUM"			/*148*/
+					 ,	"*LIGHT_EXCLUDELIST"		/*149*/
+					 ,	"*LIGHT_NUMEXCLUDED"		/*150*/
+					 ,	"*LIGHT_EXCLUDED_INCLUDE"	/*151*/
+					 ,	"*LIGHT_EXCLUDED_AFFECT_ILLUM"	/*152*/
+					 ,	"*LIGHT_EXCLUDED_AFFECT_SHADOW"	/*153*/
+					 ,	"*LIGHT_EXCLUDED"			/*154*/
+					 ,	"*LIGHT_HOTSPOT"			/*155*/
+					 ,	"*LIGHT_FALLOFF"			/*156*/
+					 ,  "*MESH_FACEMAPLIST"			/*157*/
+					 ,  "*MESH_FACEMAP"				/*158*/
+					 ,  "*MESH_FACEMAPVERT"			/*159*/
+					 ,	"*BITMAP_INVERT"			/*160*/
+					 ,	"*SHAPEOBJECT"				/*161*/
+					 ,	"*SHAPE_LINECOUNT"			/*162*/
+					 ,	"*SHAPE_LINE"				/*163*/
+					 ,	"*SHAPE_VERTEXCOUNT"		/*164*/
+					 ,	"*SHAPE_VERTEX_KNOT"		/*165*/
+					 ,	"*SHAPE_VERTEX_INTERP"		/*166*/
+					 ,	"*SHAPE_CLOSED"				/*167*/
+					 ,	"*IK_JOINT"					/*168*/
+					 ,	"*IK_TYPE"					/*169*/
+					 ,	"*IK_DOF"					/*170*/
+					 ,	"*IK_XACTIVE"				/*171*/
+					 ,	"*IK_YACTIVE"				/*172*/
+					 ,	"*IK_ZACTIVE"				/*173*/
+					 ,	"*IK_XLIMITED"				/*174*/
+					 ,	"*IK_YLIMITED"				/*175*/
+					 ,	"*IK_ZLIMITED"				/*176*/
+					 ,	"*IK_XEASE"					/*177*/
+					 ,	"*IK_YEASE"					/*178*/
+					 ,	"*IK_ZEASE"					/*179*/
+					 ,	"*IK_LIMITEXACT"			/*180*/
+					 ,	"*IK_JOINTINFO"				/*181*/
+					 ,	"*LIGHT_ATTNSTART"			/*182*/
+					 ,	"*LIGHT_ATTNEND"			/*183*/
+					 ,	"*MAP_AMBIENT"				/*184*/
+					 ,	"*MESH_VERTCOL"				/*185*/
+					 ,	"*MESH_NUMCVFACES"			/*186*/
+					 ,	"*MESH_CFACELIST"			/*187*/
+					 ,	"*MESH_CFACE"				/*188*/
+
+					 ,	"*MAP_SHINESTRENGTH"		/*189*/
+					 ,	"*MAP_FILTERCOLOR"			/*190*/
+
+					 ,	"*NODE_VISIBILITY_TRACK"	/*191*/
+					 ,	"*CONTROL_FLOAT_SAMPLE"		/*192*/
+					 ,	"*CONTROL_FLOAT_KEY"		/*193*/
+
+					 ,	"*BONE_PROPERTY"			/*194*/
+					 ,	"*BONE"						/*195*/
+					 ,	"*SKIN_INITTM"				/*196*/
+					 ,	"*CONTROL_SCALE_TRACK"		/*197*/
+					 ,	"*CONTROL_SCALE_SAMPLE"		/*198*/
+					 ,	"*SCENE_AMBIENT_ANIM"		/*199*/
+					 ,	"*CONTROL_POINT3_KEY"		/*200*/
+					 ,	"*CONTROL_TCB_POINT3_KEY"	/*201*/
+					 ,	"*CONTROL_TCB_FLOAT_KEY"	/*202*/
+					 ,	"*CONTROL_TCB_POS_KEY"		/*203*/
+					 ,	"*CONTROL_TCB_SCALE_KEY"	/*204*/
+					 ,	"*CONTROL_BEZIER_FLOAT_KEY"	/*205*/
+					 ,	"*CONTROL_BEZIER_POINT3_KEY"/*206*/
+					 ,	"*CONTROL_BEZIER_SCALE_KEY"	/*207*/
+					 ,	"*CONTROL_POS_LINEAR"		/*208*/
+					 ,	"*CONTROL_POS_TCB"			/*209*/
+					 ,	"*CONTROL_ROT_LINEAR"		/*210*/
+					 ,	"*CONTROL_ROT_BEZIER"		/*211*/
+					 ,	"*CONTROL_SCALE_LINEAR"		/*212*/
+					 ,	"*CONTROL_SCALE_TCB"		/*213*/
+					 ,	"*CONTROL_SCALE_BEZIER"		/*214*/
+
+					 ,	"*CONTROL_POS_KEY"			/*215*/
+					 ,	"*CONTROL_ROT_KEY" 			/*216*/
+					 ,	"*CONTROL_SCALE_KEY"		/*217*/
+
+					 ,	"*CONTROL_POINT3_TCB"		/*218*/
+					 ,	"*CONTROL_POINT3_BEZIER"	/*219*/
+					 ,	"*CONTROL_COLOR_BEZIER"		/*220*/
+					 ,	"*CONTROL_POINT3_SAMPLE"	/*221*/
+
+					 ,	"*CONTROL_FLOAT_TCB"		/*222*/
+					 ,	"*CONTROL_FLOAT_BEZIER"		/*223*/
+					 ,	"*CONTROL_FLOAT_LINEAR"		/*224*/
+
+					 ,	"*CAMERA_ANIMATION"			/*225*/
+					 ,	"*LIGHT_ANIMATION"			/*226*/
+
+					 ,	"*MATERIAL_WIREUNITS"		/*227*/
+
+					 ,	"*SCENE_MESHFRAMESTEP"		/*228*/
+					 ,	"*SCENE_KEYFRAMESTEP"		/*229*/
+
+					 ,	"*PROP_HIDDEN"				/*230*/
+					 ,	"*PROP_NORENDERABLE"		/*231*/
+					 ,	"*PROP_BONE"				/*232*/
+,};
+ 

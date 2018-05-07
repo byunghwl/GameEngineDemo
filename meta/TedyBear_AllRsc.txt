@@ -1,0 +1,10 @@
+3
+3
+object/TedyBear_BoneList.shrbl
+object/TedyBear_BoneList.shrbl
+10
+object/TedyBear_MeshList.shrml
+object/TedyBear_MeshList.shrml
+2
+./object/bear.shrsm
+bear.shrsm

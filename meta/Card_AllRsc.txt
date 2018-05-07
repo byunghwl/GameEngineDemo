@@ -1,0 +1,7 @@
+2
+3
+object/Card_BoneList.shrbl
+object/Card_BoneList.shrbl
+10
+object/Card_MeshList.shrml
+object/Card_MeshList.shrml
