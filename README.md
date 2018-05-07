@@ -1,10 +1,11 @@
-# GameEngine Demo - KOCCA Academy Capstone Project [Cho Sanghyun - Game Engine class]
+# GameEngine Demo 
+KOCCA Academy Capstone Project [Cho Sanghyun - Game Engine class]
 
 ## How to play
 - "demo.exe" in the root folder
 
 ## Collaborator
-Byunghwan Lee, Sunghwan Bae 
+Byunghwan Lee and Sunghwan Bae 
 
 ## Compile Requirement
 - Visual Studio 10 or later
